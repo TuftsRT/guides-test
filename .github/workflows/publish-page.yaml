@@ -13,7 +13,7 @@ jobs:
       - id: get-url
         uses: tuftsrt/get-pages-url@v1
       - id: build-and-deploy
-        uses: tuftsrt/sphinx-to-branch@develop
+        uses: tuftsrt/sphinx-to-branch@v1
         with:
           source-directory: source
           destination-directory: ${{ github.ref_name == 'main' && '.' || 'dev' }}
