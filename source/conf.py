@@ -19,7 +19,6 @@ language = "en"
 try:
     repo = Repository(".")
     repo_url: str = repo.remotes["origin"].url
-    print(repo_url)
     match = re.match(r"(?:https://|git@)([^/:]+)[/:]([^/]+)/(.+?)(?:\.git)?$", repo_url)
     github_user, github_repo = match.group(2), match.group(3)
     if repo.head.shorthand == "main":
