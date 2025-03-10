@@ -1,0 +1,21 @@
+name: test
+
+on:
+  workflow_run:
+    workflows:
+      - "pre-commit.ci - pr"
+    types:
+      - completed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo ${{ github.base_ref }}
+          echo ${{ github.head_ref }}
+          echo ${{ github.ref }}
+          echo ${{ github.ref_name }}
+          echo ${{ github.event.workflow_run.conclusion }}
+          echo ${{ github.event.workflow_run.status }}
+        shell: bash
