@@ -1,12 +1,13 @@
-name: build-main
+name: publish-page
 
 on:
   push:
     branches:
+      - develop
       - main
 
 jobs:
-  build-main:
+  publish-page:
     runs-on: ubuntu-latest
     steps:
       - id: get-url
@@ -14,8 +15,9 @@ jobs:
       - id: build-and-deploy
         uses: tuftsrt/sphinx-to-branch@v1
         with:
-          source-branch: main
           source-directory: source
+          destination-directory: ${{ github.ref_name == 'main' && '' || 'dev' }}
+          environment-file: environment.yaml
           build-arguments: "--nitpicky --fail-on-warning"
           use-bot: "true"
           use-expect: "true"
