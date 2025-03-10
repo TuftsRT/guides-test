@@ -1,0 +1,10 @@
+---
+orphan:
+nosearch:
+html_theme.sidebar_secondary.remove: true
+---
+# Tags
+- [bioinformatics (1)](/tags/bioinformatics.md)
+- [hpc (1)](/tags/hpc.md)
+- [python (1)](/tags/python.md)
+- [r (1)](/tags/r.md)
