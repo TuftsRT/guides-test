@@ -16,7 +16,7 @@ jobs:
         uses: tuftsrt/sphinx-to-branch@develop
         with:
           source-directory: source
-          destination-directory: ${{ github.ref_name == 'main' && '' || 'dev' }}
+          destination-directory: ${{ github.ref_name == 'main' && '.' || 'dev' }}
           build-arguments: "--nitpicky --fail-on-warning"
           use-bot: "true"
           use-expect: "true"
