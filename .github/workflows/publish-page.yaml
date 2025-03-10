@@ -13,11 +13,10 @@ jobs:
       - id: get-url
         uses: tuftsrt/get-pages-url@v1
       - id: build-and-deploy
-        uses: tuftsrt/sphinx-to-branch@v1
+        uses: tuftsrt/sphinx-to-branch@develop
         with:
           source-directory: source
           destination-directory: ${{ github.ref_name == 'main' && '' || 'dev' }}
-          environment-file: environment.yaml
           build-arguments: "--nitpicky --fail-on-warning"
           use-bot: "true"
           use-expect: "true"

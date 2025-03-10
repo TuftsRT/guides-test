@@ -18,6 +18,7 @@ language = "en"
 try:
     repo = Repository(".")
     repo_url: str = repo.remotes["origin"].url
+    print(repo_url)
     github_user, github_repo = repo_url.split(":")[1].split(".")[0].split("/")
     if repo.head.shorthand == "main":
         release = "pub"
