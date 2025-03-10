@@ -1,13 +1,13 @@
 [
   {
     "name": "published",
-    "version": "pub",
+    "version": "1.0.0",
     "url": "https://tuftsrt.github.io/guides-test/",
     "preferred": true
   },
   {
     "name": "development",
-    "version": "dev",
+    "version": "1.0.0-dev",
     "url": "https://tuftsrt.github.io/guides-test/dev/"
   }
 ]
