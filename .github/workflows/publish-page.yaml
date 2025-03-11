@@ -6,6 +6,10 @@ on:
       - develop
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
 jobs:
   publish-page:
     runs-on: ubuntu-latest
@@ -15,6 +19,7 @@ jobs:
       - id: build-and-deploy
         uses: tuftsrt/sphinx-to-branch@v1
         with:
+          source-branch: ${{ github.ref_name }}
           source-directory: source
           destination-directory: ${{ github.ref_name == 'main' && '.' || 'dev' }}
           build-arguments: "--nitpicky --fail-on-warning"
