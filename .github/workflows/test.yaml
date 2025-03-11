@@ -12,25 +12,25 @@ jobs:
           echo ${{ github.ref }}
           echo ${{ github.ref_name }}
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
-          sleep 1
+          sleep 2
           echo $(gh api /repos/${{ github.repository }}/commits/${{ github.ref }}/check-runs)
         shell: bash
         env:
