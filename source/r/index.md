@@ -18,8 +18,8 @@ tags: r
 
 This is just a test.
 
-__________
+---
 
-this|is|a|table
----|---|---|--
-jes|it|is|
+| this | is  | a   | table |
+| ---- | --- | --- | ----- |
+| jes  | it  | is  |       |
