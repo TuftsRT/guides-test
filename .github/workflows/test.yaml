@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/statuses")
           echo ${{ github.base_ref }}
           echo ${{ github.head_ref }}
           echo ${{ github.ref }}
