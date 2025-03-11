@@ -22,4 +22,4 @@ This is just a test.
 
 | this | is  | a   | table |
 | ---- | --- | --- | ----- |
-| yes  | it  | is  |
+| yes  | it  | is  |       |
