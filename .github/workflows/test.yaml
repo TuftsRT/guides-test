@@ -1,6 +1,6 @@
 name: test
 
-on: pull_request
+on: status
 
 jobs:
   test:
@@ -11,11 +11,6 @@ jobs:
           echo ${{ github.head_ref }}
           echo ${{ github.ref }}
           echo ${{ github.ref_name }}
-          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/status")
-          sleep 5
-          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/status")
-          sleep 5
-          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/status")
+          echo ${{ github.event.state}}
+          echo ${{ github.event.description}}
         shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
