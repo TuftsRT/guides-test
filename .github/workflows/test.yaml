@@ -11,11 +11,11 @@ jobs:
           echo ${{ github.head_ref }}
           echo ${{ github.ref }}
           echo ${{ github.ref_name }}
-          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/statuses")
+          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/status")
           sleep 5
-          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/statuses")
+          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/status")
           sleep 5
-          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/statuses")
+          echo $(gh api "repos/${{ github.repository }}/commits/${{ github.ref }}/status")
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
